@@ -1,3 +1,11 @@
 @import url("./partials/header.css");
 @import url("./partials/section-um.css");
 @import url("/assets/css/global.css");
+
+#section_clientes {
+    /*background-image: linear-gradient(to right, rgb(255, 255, 255) 40%, var(--cor-roxo2));*/
+    background-image: linear-gradient(to right, var(--cor-cinza) 30%, rgb(255, 255, 255) 70%);
+}
+#section_produtos {
+    background-image: linear-gradient(to top, var(--cor-bege) 20%, rgb(255, 255, 255) 80%);
+}

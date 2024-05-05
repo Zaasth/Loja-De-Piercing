@@ -569,3 +569,47 @@ video {
 .underline {
   text-decoration-line: underline;
 }
+
+.sumir {
+  display: none;
+}
+
+.roxo1 {
+  background-color: var(--cor-roxo1);
+}
+.roxo2 {
+  background-color: var(--cor-roxo2);
+}
+.bege {
+  background-color: var(--cor-bege);
+}
+.cinza {
+  background-color: var(--cor-cinza);
+}
+.preto {
+  background-color: var(--cor-preto);
+}
+.Opacity {
+  opacity: 80%;
+}
+[data-anime] {
+  opacity: 0;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
