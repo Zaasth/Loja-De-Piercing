@@ -1,23 +1,23 @@
     const btnCloseMenu = document.getElementById("closemenu");
     const menuDiv = document.getElementById("menu_mobile");
-    let opa = "100%";
+    let opacidade = "100%";
     
   abrirMenu = () => {
-    if(opa == "0%") {
-        opa = "100%";
+    if(opacidade == "0%") {
+        opacidade = "100%";
         menuDiv.style.opacity = opa;
     }
   }
   fecharMenu = () => {
-    if(opa == "100%"){
-        opa = "0%";
+    if(opacidade == "100%"){
+        opacidade = "0%";
         menuDiv.style.opacity = opa;
     }
 }
 
 window.onload=function(){
     opa = "0%"
-    menuDiv.style.opacity = opa;
+    menuDiv.style.opacity = opacidade;
     Menu1()
 
     function Menu1(){
