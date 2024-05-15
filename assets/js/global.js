@@ -5,31 +5,16 @@
   abrirMenu = () => {
     if(opacidade == "0%") {
         opacidade = "100%";
-        menuDiv.style.opacity = opa;
+        menuDiv.style.opacity = opacidade;
     }
   }
   fecharMenu = () => {
     if(opacidade == "100%"){
         opacidade = "0%";
-        menuDiv.style.opacity = opa;
+        menuDiv.style.opacity = opacidade;
     }
 }
-
-window.onload=function(){
-    opa = "0%"
-    menuDiv.style.opacity = opacidade;
-    Menu1()
-
-    function Menu1(){
-        btnCloseMenu.addEventListener("click", function() {
-            abrirMenu();
-            btnCloseMenu.addEventListener("click", function() {
-            fecharMenu();
-             Menu1();
-        });
-    });
-    }
-  }
+  
   //Animação 
   const debounce = function(func, wait, immediate) {
     let timeout;
@@ -64,3 +49,53 @@ window.onload=function(){
     if(target.length){
         window.addEventListener("scroll", debounce(AnimeScroll), 200); 
     }
+
+      function criarModal() {
+      const modal = document.querySelector("#modal");
+      const TextModal = document.querySelector("#text_modal");
+      const CloseModal = document.querySelector("#close_modal");
+
+      modal.showModal();
+      modal.classList.add("modal1");
+
+      modal.innerHTML = `
+        <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        fecharModal()
+      }, 1500);
+  }
+
+  // Função para fechar o modal
+  function fecharModal() {
+      const modal = document.querySelector("#modal");
+      modal.close();
+  }
+
+  // Evento onload da janela
+  window.onload=function(){
+    criarModal();
+    opacidade = "0%"
+    menuDiv.style.opacity = opacidade;
+    Menu1()
+
+    function Menu1(){
+        btnCloseMenu.addEventListener("click", function() {
+            abrirMenu();
+            btnCloseMenu.addEventListener("click", function() {
+            fecharMenu();
+             Menu1();
+        });
+    });
+    }
+  }

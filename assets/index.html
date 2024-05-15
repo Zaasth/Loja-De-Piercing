@@ -10,6 +10,13 @@
     <title>Alana Body Piercing</title>
 </head>
 <body>
+  <dialog style="width: 100%; height: 100vh;" id="modal" >
+
+    <section id="section_modal">
+        <div id="text_modal"></div>
+    </section>
+    
+  </dialog>
 <!-- Inicio header -->
 <section id="section_header" data-anime="top">
 
@@ -69,8 +76,9 @@
           </div>
         </div>
       </div>
+    
     </header>
-  
+
     <div style="background-color: var(--cor-bege) ;" class="relative px-6 pt-14 lg:px-8">
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -156,89 +164,90 @@
 
 <section id="section_produtos" data-anime="top">
 
-<div class="">
-  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <h2 class="text-2xl font-bold tracking-tight text-gray-900">Nossos melhores produtos!</h2>
+  <div class="">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">Nossos melhores produtos!</h2>
 
-    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-      <div class="group relative">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-          <img src="https://cdn.awsli.com.br/600x700/1231/1231374/produto/136672347/85ef34e449.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-        </div>
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Raio Cravejado - Aço
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Branco</p>
+      <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div class="group relative">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="https://cdn.awsli.com.br/600x700/1231/1231374/produto/136672347/85ef34e449.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
           </div>
-          <p class="text-sm font-medium text-gray-900">R$ 29,99</p>
-        </div>
-      </div>
-      <!-- More products... -->
-      <div class="group relative">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-          <img src="https://cdn.awsli.com.br/2500x2500/2318/2318784/produto/226320139550659fb79.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-        </div>
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Raio Liso - Titânio
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Branco</p>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Raio Cravejado - Aço
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Branco</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">R$ 29,99</p>
           </div>
-          <p class="text-sm font-medium text-gray-900">R$ 44,99</p>
         </div>
-      </div>
-      <!-- More products... -->
-      <div class="group relative">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-          <img src="https://http2.mlstatic.com/D_NQ_NP_758700-MLB54003037665_022023-O.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-        </div>
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Ponto De Luza - Aço
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Branco</p>
+        <!-- More products... -->
+        <div class="group relative">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="https://cdn.awsli.com.br/2500x2500/2318/2318784/produto/226320139550659fb79.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
           </div>
-          <p class="text-sm font-medium text-gray-900">R$ 29,99</p>
-        </div>
-      </div>
-      <!-- More products... -->
-      <div class="group relative">
-        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-          <img src="https://cdn.sistemawbuy.com.br/arquivos/88f5f0d3aec97e0c2780d4169eccb4f5/produtos/XAE1DUA5/labret-cobra-62f56286c2347.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-        </div>
-        <div class="mt-4 flex justify-between">
-          <div>
-            <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Labret Cobra
-              </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">Branco</p>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Raio Liso - Titânio
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Branco</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">R$ 44,99</p>
           </div>
-          <p class="text-sm font-medium text-gray-900">R$ 44,99</p>
+        </div>
+        <!-- More products... -->
+        <div class="group relative">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_758700-MLB54003037665_022023-O.webp" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Ponto De Luza - Aço
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Branco</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">R$ 29,99</p>
+          </div>
+        </div>
+        <!-- More products... -->
+        <div class="group relative">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="https://cdn.sistemawbuy.com.br/arquivos/88f5f0d3aec97e0c2780d4169eccb4f5/produtos/XAE1DUA5/labret-cobra-62f56286c2347.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Labret Cobra
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Branco</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">R$ 44,99</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 </section>
 
 <section id="section_sobre" data-anime="left">
+  
   <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
     <div class="absolute inset-0 -z-10 overflow-hidden">
       <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
@@ -253,54 +262,24 @@
         <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
       </svg>
     </div>
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-      <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-        <div class="lg:pr-4">
-          <div class="lg:max-w-lg">
-            <p class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</p>
-            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</h1>
-            <p class="mt-6 text-xl leading-8 text-gray-700">Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
-          </div>
-        </div>
+    
+    <div class="grid grid-rows-3 grid-cols-4 gap-y-0 gap-x-4">
+      <div class="grid col-span-2 row-span-0 content-center justify-items-center">
+        <h1 class="text-2xl font-bold">Saiba mais sobre a nossa localização</h1>
+        <br>
+        <p style="padding: 0% 10%; padding-top: 7%;" class="font-light">Localizado em Itaboraí - RJ, nosso estúdio oferece um ambiente acolhedor e profissional para sua próxima experiência de piercing. Com uma equipe experiente e dedicada, estamos prontos para atender às suas necessidades. Visite-nos hoje e descubra o melhor em piercing na área."</p>
       </div>
-      <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-        <iframe width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.167827377686!2d-42.94031779999999!3d-22.7962444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99951d2abd339f%3A0xa3c307be67379ea7!2sNALLA%20BODYART!5e0!3m2!1spt-BR!2sbr!4v1714861192579!5m2!1spt-BR!2sbr" style=""></iframe>
+      <div class="col-span-2 grid justify-items-center">
+        <img class="rounded-lg"  style=" width: 65%;" src="/assets/images/pages/index/map01.jpg" alt="">
       </div>
-      <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-        <div class="lg:pr-4">
-          <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-            <p>Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-            <ul role="list" class="mt-8 space-y-8 text-gray-600">
-              <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">Push to deploy.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">SSL certificates.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                  <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
-                </svg>
-                <span><strong class="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
-              </li>
-            </ul>
-            <p class="mt-8">Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
-            <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
-            <p class="mt-6">Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
-          </div>
-        </div>
+      <div class="col-span-4 row-span-2 content-center grid justify-items-center">
+        <iframe class="rounded-lg ring-2 ring-indigo-500/50"  width="95%" height="650px" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.167827377686!2d-42.94031779999999!3d-22.7962444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99951d2abd339f%3A0xa3c307be67379ea7!2sNALLA%20BODYART!5e0!3m2!1spt-BR!2sbr!4v1714861192579!5m2!1spt-BR!2sbr" style=""></iframe>
       </div>
     </div>
   </div>
-  
+
 </section>
+
 
 <section id="section_status" data-anime="left">
   <div class="bg-white py-24 sm:py-32">
@@ -436,7 +415,7 @@
     </div>
   </div>
 </footer>
+
     <script src="/assets/js/global.js"></script>
-    
 </body>
 </html>
