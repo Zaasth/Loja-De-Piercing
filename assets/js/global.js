@@ -11,7 +11,7 @@
   fecharMenu = () => {
     if(opacidade == "100%"){
         opacidade = "0%";
-        menuDiv.style.opacity = opacidade;
+        menuDiv.style.opacity = opac;
     }
 }
   
@@ -49,7 +49,7 @@
     if(target.length){
         window.addEventListener("scroll", debounce(AnimeScroll), 200); 
     }
-
+/*
       function criarModal() {
       const modal = document.querySelector("#modal");
       const TextModal = document.querySelector("#text_modal");
@@ -99,3 +99,4 @@
     });
     }
   }
+  */
