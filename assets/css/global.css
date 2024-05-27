@@ -1,6 +1,7 @@
 @import url("/assets/css/elements.css");
 @import url("/assets/css/fonts.css");
 @import url("/assets/css/variables.css");
+@import url("/assets/pages/index/partials/mobile.css");
 /*
 ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */

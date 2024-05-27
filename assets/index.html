@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/pages/index/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="shortcut icon" href="/assets/images/global/logo.png" type="image/x-icon">
@@ -18,19 +19,19 @@
     
   </dialog>
 <!-- Inicio header -->
-<section id="section_header" data-anime="top">
+<section id="section_header">
 
   <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
+          <a href="/assets/index.html" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
             <img class="h-8 w-30" src="/assets/images/global/logo-fundo.png" alt="">
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <button id="openmenu" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Open main menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -38,10 +39,10 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12 Opacity">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Serviços</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Produtos</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Contato</a>
+          <a href="#section_header" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+          <a href="#section_produtos" class="text-sm font-semibold leading-6 text-gray-900">Produtos</a>
+          <a href="#section_services" class="text-sm font-semibold leading-6 text-gray-900">Serviços</a>
+          <a href="#section_sobre" class="text-sm font-semibold leading-6 text-gray-900">Contato</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           
@@ -50,11 +51,10 @@
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div  class="lg:hidden" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-50"></div>
         <div id="menu_mobile" class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
+              <span class="sr-only">Loja</span>
               <img class="h-8 w-auto" src="/assets/images/global/logo-fundo.png" alt="">
             </a>
             <button id="closemenu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -67,10 +67,10 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Serviços</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Produto</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contato</a>
+                <a href="#section_header" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#section_produtos" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Produto</a>
+                <a href="#section_services" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Serviços</a>
+                <a href="#section_sobre" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contato</a>
               </div>
             </div>
           </div>
@@ -83,18 +83,18 @@
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-44">
+      <div id="div_header" class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-44">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Agende agora e dê vida ao seu estilo único! <a href="#" style="color: var(--cor-roxo1);" class="font-semibold"><span class="absolute inset-0" aria-hidden="true"></span>AGENDAR <span aria-hidden="true">&rarr;</span></a>
+            Agende agora e dê vida ao seu estilo único! <a href="https://api.whatsapp.com/send/?phone=5521990946729&text&type=phone_number&app_absent=0" style="color: var(--cor-roxo1);" class="font-semibold"><span class="absolute inset-0" aria-hidden="true"></span>AGENDAR <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Desperte Sua Essência: Descubra a Arte dos Piercings</h1>
           <p class="mt-6 text-lg leading-8 text-gray-600">Transforme Sua Aparência e Eleve Sua Confiança com Piercings Feitos com Paixão e Perfeição.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 roxo1 hover:bg-violet-600">Serviços</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sobre nós <span aria-hidden="true">→</span></a>
+            <a href="#section_services" class="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 roxo1 hover:bg-violet-600">Serviços</a>
+            <a href="#section_sobre" class="text-sm font-semibold leading-6 text-gray-900">Sobre nós <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
               </div>
             </div>
   
-            <a href="#" class="inline-block rounded-md border border-transparent px-8 py-3 text-center font-medium text-white roxo1 hover:bg-violet-600 hover:-translate-y-3">Ver mais</a>
+            <a href="https://www.instagram.com/alanabpiercer" class="inline-block rounded-md border border-transparent px-8 py-3 text-center font-medium text-white roxo1 hover:bg-violet-600 hover:-translate-y-3">Ver mais</a>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="#">
+                <a href="https://www.instagram.com/alanabpiercer">
                   <span aria-hidden="true" class="absolute inset-0"></span>
                   Raio Cravejado - Aço
                 </a>
@@ -194,7 +194,7 @@
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="#">
+                <a href="https://www.instagram.com/alanabpiercer">
                   <span aria-hidden="true" class="absolute inset-0"></span>
                   Raio Liso - Titânio
                 </a>
@@ -212,7 +212,7 @@
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="#">
+                <a href="https://www.instagram.com/alanabpiercer">
                   <span aria-hidden="true" class="absolute inset-0"></span>
                   Ponto De Luza - Aço
                 </a>
@@ -230,7 +230,7 @@
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="#">
+                <a href="https://www.instagram.com/alanabpiercer">
                   <span aria-hidden="true" class="absolute inset-0"></span>
                   Labret Cobra
                 </a>
@@ -254,12 +254,12 @@
         <p class="text-sm text-gray-500">os melhores serviços para você!</p>
       </div>
       <div class="flex mx-auto mt-12 bg-gray-100 rounded-full max-w-[200px]">
-        <button class="text-white font-semibold w-full text-sm roxo1 hover:bg-violet-600 py-2.5 px-4 rounded-full">
-          Serviços</button>
+        <!-- <button class="text-white font-semibold w-full text-sm roxo1 hover:bg-violet-600 py-2.5 px-4 rounded-full">
+          Serviços</button> -->
       </div>
       <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-6 max-sm:max-w-sm max-sm:mx-auto">
         <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-md overflow-hidden transition-all duration-500 hover:scale-105">
-          <div class="h-28 bege text-center p-4">
+          <div class="h-28 cinza text-center p-4">
             <h3 class="text-2xl text-white font-semibold mb-1">Orelha</h3>
           </div>
           <div class="h-24 w-24 mx-auto -mt-8 shadow-xl rounded-full bg-black 0 text-white border-4 flex flex-col items-center justify-center border-white">
@@ -317,7 +317,7 @@
                 Transversal - R$ 50,00
               </li>
             </ul>
-            <button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button>
+            <a href="https://api.whatsapp.com/send/?phone=5521990946729&text&type=phone_number&app_absent=0"><button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button></a>
           </div>
         </div>
         <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-md overflow-hidden transition-all duration-500 hover:scale-105 relative">
@@ -368,11 +368,11 @@
                 Língua - R$ 40,00
               </li>
             </ul>
-            <button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button>
+            <a href="https://api.whatsapp.com/send/?phone=5521990946729&text&type=phone_number&app_absent=0"><button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button></a>
           </div>
         </div>
         <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-md overflow-hidden transition-all duration-500 hover:scale-105">
-          <div class="h-28 cinza text-center p-4">
+          <div class="h-28 bege text-center p-4">
             <h3 class="text-2xl text-white font-semibold mb-1">Tronco</h3>
           </div>
           <div class="h-24 w-24 mx-auto -mt-8 shadow-xl rounded-full bg-black text-white border-4 flex flex-col items-center justify-center border-white">
@@ -406,7 +406,7 @@
                 Íntimo Feminino c/titânio - R$ 90,00
               </li>
             </ul>
-            <button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button>
+            <a href="https://api.whatsapp.com/send/?phone=5521990946729&text&type=phone_number&app_absent=0"><button type="button" class="w-full mt-8 px-2 py-2 text-sm font-semibold text-white roxo1 hover:bg-violet-600 rounded-full">Agendar Agora</button></a>
           </div>
         </div>
       </div>
@@ -448,72 +448,61 @@
 
 </section>
 
+<section id="section_sobre_mobile" data-anime="left">
+  <br>
+  
+    
+    <div class="grid grid-rows-3 grid-cols-4 gap-y-0 gap-x-0" style="text-align: center;">
+      <div class="grid col-span-4 row-span-0 content-center justify-items-center">
+        <h1 class="text-2xl font-bold">Saiba mais sobre a nossa localização</h1>
+        <br>
+        <p style="padding: 0% 10%; padding-top: 7%;" class="font-light">Localizado em Itaboraí - RJ, nosso estúdio oferece um ambiente acolhedor e profissional para sua próxima experiência de piercing. Com uma equipe experiente e dedicada, estamos prontos para atender às suas necessidades. Visite-nos hoje e descubra o melhor em piercing na área."</p>
+      </div>
+      <div class="col-span-4 row-span-2 content-center grid justify-items-center">
+        <iframe class="rounded-lg ring-2 ring-indigo-500/50"  width="95%" height="450px" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.167827377686!2d-42.94031779999999!3d-22.7962444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99951d2abd339f%3A0xa3c307be67379ea7!2sNALLA%20BODYART!5e0!3m2!1spt-BR!2sbr!4v1714861192579!5m2!1spt-BR!2sbr" style=""></iframe>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <footer class="bg-gray-900 p-10 font-[sans-serif] tracking-wide">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="lg:flex lg:items-center">
         <a href="javascript:void(0)">
-          <img src="/assets/images/global/logo-fundo2.png" alt="logo" class="w-52" />
+          <img style="width: 50%;" src="/assets/images/global/logo-fundo2.png" alt="logo" class="w-52" />
         </a>
       </div>
 
       <div class="lg:flex lg:items-center">
         <ul class="flex space-x-6">
+         
           <li>
-            <a href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 hover:fill-white w-7 h-7" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7v-7h-2v-3h2V8.5A3.5 3.5 0 0 1 15.5 5H18v3h-2a1 1 0 0 0-1 1v2h3v3h-3v7h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"
-                  clip-rule="evenodd" />
-              </svg>
+            <a href="https://www.instagram.com/alanabpiercer">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#d1d5d8" d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
             </a>
           </li>
+        
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-6 text-white">Contato</h4>
+        <ul class="space-y-4">
           <li>
-            <a href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 hover:fill-white w-7 h-7" viewBox="0 0 24 24">
-                <path fill-rule="evenodd"
-                  d="M21 5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5zm-2.5 8.2v5.3h-2.79v-4.93a1.4 1.4 0 0 0-1.4-1.4c-.77 0-1.39.63-1.39 1.4v4.93h-2.79v-8.37h2.79v1.11c.48-.78 1.47-1.3 2.32-1.3 1.8 0 3.26 1.46 3.26 3.26zM6.88 8.56a1.686 1.686 0 0 0 0-3.37 1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 1.57v8.37H5.5v-8.37h2.77z"
-                  clip-rule="evenodd" />
-              </svg>
-            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5521990946729&text&type=phone_number&app_absent=0" class="text-gray-300 hover:text-white text-sm">(21) 99094-6729</a>
           </li>
           <li>
-            <a href="javascript:void(0)">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="fill-gray-300 hover:fill-white w-7 h-7"
-                viewBox="0 0 24 24">
-                <path
-                  d="M22.92 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.83 4.5 17.72 4 16.46 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.9 20.29 6.16 21 8.58 21c7.88 0 12.21-6.54 12.21-12.21 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
-              </svg>
-            </a>
+            <a href="https://www.google.com/maps?ll=-22.796921,-42.939753&z=18&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=11800283962997710503" class="text-gray-300 hover:text-white text-sm">Av. Cabo José Rodrigues, 808 - Marambaia, Itaboraí - RJ, 24859-408</a>
           </li>
         </ul>
       </div>
 
       <div>
-        <h4 class="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+        <h4 class="text-lg font-semibold mb-6 text-white">Site Desenvolvido por</h4>
         <ul class="space-y-4">
           <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Email</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Phone</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Address</a>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-lg font-semibold mb-6 text-white">Information</h4>
-        <ul class="space-y-4">
-          <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">About Us</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="text-gray-300 hover:text-white text-sm">Privacy Policy</a>
+            <a href="https://github.com/Zaasth" class="text-gray-300 hover:text-white text-sm">Wellinton Lucas           <svg style="display: inline-block;" xmlns="http://www.w3.org/2000/svg" height="32" width="31" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFD43B" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
           </li>
         </ul>
       </div>

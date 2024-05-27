@@ -1,20 +1,23 @@
-    const btnCloseMenu = document.getElementById("closemenu");
-    const menuDiv = document.getElementById("menu_mobile");
-    let opacidade = "100%";
-    
-  abrirMenu = () => {
-    if(opacidade == "0%") {
-        opacidade = "100%";
-        menuDiv.style.opacity = opacidade;
-    }
-  }
-  fecharMenu = () => {
-    if(opacidade == "100%"){
-        opacidade = "0%";
-        menuDiv.style.opacity = opac;
+const btnOpenMenu = document.getElementById("openmenu");
+const btnCloseMenu = document.getElementById("closemenu");
+const menuDiv = document.getElementById("menu_mobile");
+let aberto = false;
+
+menuDiv.style.display = "none"; // Inicialmente, o menu está oculto
+
+abrirFecharMenu = () => {
+    if (!aberto) {
+        menuDiv.style.display = "block"; // Exibir o menu
+        aberto = true;
+    } else {
+        menuDiv.style.display = "none"; // Ocultar o menu
+        aberto = false;
     }
 }
-  
+
+btnOpenMenu.addEventListener("click", abrirFecharMenu);
+btnCloseMenu.addEventListener("click", abrirFecharMenu);
+
   //Animação 
   const debounce = function(func, wait, immediate) {
     let timeout;
